@@ -58,13 +58,10 @@ nav > a:hover {
 
 main {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-}
-
-main > h1 {
-    font-size: 36pt;
-    border-bottom: solid #222222 2px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 main p {
@@ -75,41 +72,91 @@ main p {
     font-size: 10pt;
 }
 
+/* Description about me */
+
 .myself-description {
     width: 75%;
-    max-width: 1000px;
+    max-width: 800px;
     min-width: 400px;
+    height: max-content;
 
-    padding: 20px 20px;
-    border-radius: 40px;
+    padding: 0 40px;
+}
+
+.myself-description > h1 {
+    font-size: 36pt;
+    border-bottom: solid #222222 2px;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .myself-description > p {
     text-align: justify;
 }
 
-.project-list > * {
-    display: inline-block;
+.project-list > li {
     color: black;
     font-size: 16pt;
-
 }
 
 .project-list a {
+    color: black;
     text-decoration: underline;
     padding: 0 4px;
 }
 
-.hobby-images img {
-    width: 100px;
+/* The hobby div */
+
+.hobby-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+    max-width: 800px;
+    min-width: 400px;
+    padding: 0 40px;
 }
+
+.hobby-name > h2 {
+    font-size: 36pt;
+    border-bottom: solid #222222 2px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.hobby-description> p {
+    text-align: justify;
+
+}
+
+.hobby-examples
+
+.hobby-enumeration > li {
+    font-size: 16pt;
+}
+
+
+.hobby-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-width: 500px;
+}
+
+.hobby-images img {
+    width: 175px;
+    padding: 0 20px;
+}
+
 
 
 /* The footer located at the bottom of the page */
 footer {
-    bottom: 0;
-    left: 0;
-    right: 0;
+    position: static;
 
     display: flex;
     justify-content: space-between;
