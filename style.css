@@ -1,0 +1,129 @@
+/* This contains variables for the css colors */
+:root {
+    --header-footer: #222222;
+}
+
+/* This is settings that go to all elements of the page */
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+}
+
+/* These are settings to set the default font styles in the body */
+body {
+    font-family: sans-serif;
+    font-style: normal;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 60px;
+    background-color: var(--header-footer);
+    padding: 0 20px;
+}
+
+header > h1 {
+    font-size: 16pt;
+    font-weight: 400;
+    color: white;
+    margin: 0;
+}
+
+nav {
+
+}
+
+nav > a {
+    font-size: 16pt;
+    color: white;
+    text-decoration: none;
+}
+
+nav > a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* The content inside of the main */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main > h1 {
+    font-size: 36pt;
+    border-bottom: solid #222222 2px;
+}
+
+main p {
+    font-size: 16pt;
+}
+
+.p-parenthesis {
+    font-size: 10pt;
+}
+
+.myself-description {
+    width: 75%;
+    max-width: 1000px;
+    min-width: 400px;
+
+    padding: 20px 20px;
+    border-radius: 40px;
+}
+
+.myself-description > p {
+    text-align: justify;
+}
+
+.project-list > * {
+    display: inline-block;
+    color: black;
+    font-size: 16pt;
+
+}
+
+.project-list a {
+    text-decoration: underline;
+    padding: 0 4px;
+}
+
+.hobby-images img {
+    width: 100px;
+}
+
+
+/* The footer located at the bottom of the page */
+footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: fit-content;
+    background-color: var(--header-footer);
+
+    padding: 10px 20px;
+}
+
+/* Applies to all direct children of the footer */
+footer > h6 {
+    font-size: 10pt;
+    font-weight: 300;
+    color: white;
+}
