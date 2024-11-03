@@ -58,106 +58,106 @@ nav > a:hover {
 
 main {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
 }
 
-main p {
-    font-size: 16pt;
-}
 
-.p-parenthesis {
-    font-size: 10pt;
-}
-
-/* Description about me */
-
-.myself-description {
-    width: 75%;
-    max-width: 800px;
-    min-width: 400px;
-    height: max-content;
-
-    padding: 0 40px;
-}
-
-.myself-description > h1 {
-    font-size: 36pt;
-    border-bottom: solid #222222 2px;
-    text-align: center;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
-
-.myself-description > p {
-    text-align: justify;
-}
-
-.project-list > li {
-    color: black;
-    font-size: 16pt;
-}
-
-.project-list a {
-    color: black;
-    text-decoration: underline;
-    padding: 0 4px;
-}
-
-/* The hobby div */
-
-.hobby-div {
+.info-block {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    width: 75%;
-    max-width: 800px;
-    min-width: 400px;
-    padding: 0 40px;
+    min-width: unset;
+    width: 90%;
+    max-width: unset;
+    border-radius: 25px;
+    box-shadow: 3px 3px 6px #555;
+    padding: 20px 40px;
+    margin: 10px;
+    min-height: 700px;
+    height: fit-content;
+    transition: all 0.2s ease;
 }
 
-.hobby-name > h2 {
-    font-size: 36pt;
-    border-bottom: solid #222222 2px;
-    padding-bottom: 20px;
+.info-block:hover {
+    box-shadow: 6px 6px 12px #555;
+}
+
+.info-header {
+    border-bottom: solid black 4px;
     margin-bottom: 20px;
-    margin-top: 20px;
 }
 
-.hobby-description> p {
+.info-header > h1 {
+    font-size: 52pt;
+}
+
+.info-block p, li {
+    font-size: 32pt;
     text-align: justify;
-
 }
 
-.hobby-examples
+.info-block .p-parenthesis {
+    font-size: 24pt;
+}
 
-.hobby-enumeration > li {
-    font-size: 16pt;
+.info-block img {
+  width: 150px;
+}
+
+.info-block a {
+    color: black;
+    text-decoration: none;
+    transition: all 1s ease;
+}
+
+.info-block a:hover {
+    text-decoration: underline;
 }
 
 
-.hobby-images {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    min-width: 500px;
-}
+@media only screen and (min-width: 1000px) {
+    .info-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        min-width: 500px;
+        width: 50%;
+        max-width: 700px;
+        border-radius: 25px;
+        box-shadow: 3px 3px 6px #555;
+        padding: 20px 40px;
+        margin: 10px;
+        min-height: 800px;
+        height: fit-content;
+        transition: all 0.2s ease;
+    }
 
-.hobby-images img {
-    width: 175px;
-    padding: 0 20px;
-}
+    .info-header > h1 {
+        font-size: 36pt;
+    }
 
+    .info-block p, li {
+        font-size: 16pt;
+        text-align: justify;
+    }
+
+    .info-block .p-parenthesis {
+        font-size: 10pt;
+    }
+
+}
 
 
 /* The footer located at the bottom of the page */
 footer {
     position: static;
-
+    bottom: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -167,6 +167,25 @@ footer {
 
     padding: 10px 20px;
 }
+
+@media only screen and (min-width: 1455px) {
+    footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        height: fit-content;
+        background-color: var(--header-footer);
+
+        padding: 10px 20px;
+    }
+}
+
+
 
 /* Applies to all direct children of the footer */
 footer > h6 {
